@@ -3,7 +3,7 @@ const search = document.getElementById ('search')
 
 
 search.addEventListener('click', async function searchOrders (){
-    let url = `https://api.escuelajs.co/api/v1/products`
+    let url = `https://api.sampleapis.com/recipes/recipes`
     let response = await fetch (url) 
     let result = await response.json()
 
