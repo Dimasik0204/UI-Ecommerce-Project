@@ -1,7 +1,4 @@
 
-
-
-
 const search = document.getElementById ('search')
 const menu = document.getElementById('menu')
 const desserts = document.getElementById('desserts')
