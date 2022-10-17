@@ -1,7 +1,5 @@
 
 
-
-
 const search = document.getElementById ('search')
 const menu = document.getElementById('menu')
 const desserts = document.getElementById('desserts')
@@ -57,15 +55,3 @@ displayDessertsButton.addEventListener ('click', async function (){
         })
         desserts.innerHTML = dessertsDisplay.join('')    
 })
-
-
-
-
-
-
-/*
-
-getAllMenues(function(menues){
-console.log(menues)
-})
-*/
