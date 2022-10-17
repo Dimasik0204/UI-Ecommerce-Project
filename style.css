@@ -8,3 +8,8 @@
     width: 350px;
     height: 350px;
 }
+
+.nav-link {
+    color: brown;
+    margin-bottom: 30px;
+}
