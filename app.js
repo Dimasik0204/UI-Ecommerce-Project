@@ -40,11 +40,8 @@ displayDessertsButton.addEventListener ('click', async function (){
         let result = await response.json()
         console.log(result)
 
-
-        
         const dessertSection = result.filter (function(dessert) {
             return dessert.course === 'Desserts'
-            
         })
         const dessertsDisplay = dessertSection.map (function (dessertRecipie) {
             return `
@@ -52,14 +49,10 @@ displayDessertsButton.addEventListener ('click', async function (){
                         <img src = ${dessertRecipie.photoUrl} />
                         <h2>${dessertRecipie.title}</h2>
                         <h3>${dessertRecipie.cuisine}</h3>
-                        <p>${dessertRecipie.description}</p>
-                                        
+                        <p>${dessertRecipie.description}</p>                             
                     </li>`
         })
-    
-        desserts.innerHTML = dessertsDisplay.join('') 
-    
-    
+        desserts.innerHTML = dessertsDisplay.join('')    
 })
 
 
