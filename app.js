@@ -14,14 +14,14 @@ search.addEventListener('click', async function searchOrders (){
     console.log(result)
 })
 
-async function getAllMenues () {
+async function getAllMenus () {
     const url = 'https://api.sampleapis.com/recipes/recipes'
     let response = await fetch (url) 
     let result = await response.json()
     console.log (result)
     const menuDisplay = result.map (function (recipies) {
         return `
-                <li> 
+                <li > 
                     <img src = ${recipies.photoUrl} />
                     <h2>${recipies.title}</h2>
                     <h3>${recipies.course}</h3>
@@ -30,10 +30,13 @@ async function getAllMenues () {
                                     
                 </li>`
     })
+
     menu.innerHTML = menuDisplay.join('')
     
 }
-getAllMenues()
+
+
+
 
 /*
 
