@@ -1,5 +1,9 @@
-const search = document.getElementById ('search')
 
+
+
+
+const search = document.getElementById ('search')
+const menu = document.getElementById('menu')
 
 
 search.addEventListener('click', async function searchOrders (){
@@ -9,3 +13,31 @@ search.addEventListener('click', async function searchOrders (){
 
     console.log(result)
 })
+
+async function getAllMenues () {
+    const url = 'https://api.sampleapis.com/recipes/recipes'
+    let response = await fetch (url) 
+    let result = await response.json()
+    console.log (result)
+    const menuDisplay = result.map (function (recipies) {
+        return `
+                <li> 
+                    <img src = ${recipies.photoUrl} />
+                    <h2>${recipies.title}</h2>
+                    <h3>${recipies.course}</h3>
+                    <h3>${recipies.cuisine}</h3>
+                    <p>${recipies.description}</p>
+                                    
+                </li>`
+    })
+    menu.innerHTML = menuDisplay.join('')
+    
+}
+getAllMenues()
+
+/*
+
+getAllMenues(function(menues){
+console.log(menues)
+})
+*/
