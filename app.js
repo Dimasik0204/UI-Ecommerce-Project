@@ -1,10 +1,20 @@
 
-
 const search = document.getElementById ('search')
 const menu = document.getElementById('menu')
 const desserts = document.getElementById('desserts')
 const displayDessertsButton = document.getElementById('displayDessertsButton')
-
+const MainCourse = document.getElementById('MainCourse')
+const displayMainCourseButton = document.getElementById('displayMainCourseButton')
+const lunch = document.getElementById('Lunch')
+const displayLunchButton = document.getElementById('displayLunchButton')
+const Breakfast = document.getElementById('Breakfast')
+const displayBreakfastButton = document.getElementById('displayBreakfastButton')
+const SnacksAndSandwiches = document.getElementById('SnacksAndSandwiches')
+const displaySnacksAndSandwichesButton = document.getElementById('displaySnacksAndSandwichesButton')
+const SideDishes = document.getElementById('SideDishes')
+const DisplaySideDishesButton = document.getElementById('DisplaySideDishesButton')
+const Soup = document.getElementById('Soup')
+const DisplaySoupButton = document.getElementById('DisplaySoupButton')
 
 search.addEventListener('click', async function searchOrders (){
     let url = `https://api.sampleapis.com/recipes/recipes`
@@ -55,3 +65,15 @@ displayDessertsButton.addEventListener ('click', async function (){
         })
         desserts.innerHTML = dessertsDisplay.join('')    
 })
+
+
+
+
+
+
+/*
+
+getAllMenues(function(menues){
+console.log(menues)
+})
+*/
