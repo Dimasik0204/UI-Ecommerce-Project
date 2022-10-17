@@ -3,3 +3,8 @@
     justify-content: center;
     margin-top: 10px;
 }
+
+.nav-link {
+    color: brown;
+    margin-bottom: 30px;
+}
