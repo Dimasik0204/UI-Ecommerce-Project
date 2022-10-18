@@ -2,7 +2,10 @@
 
 
 const dessertPage = document.getElementById('dessertPage')
-
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const recipeId = urlParams.get('recipeId')
+console.log(recipeId)
 
 
 
@@ -19,12 +22,13 @@ async function getDesertPage(){
         })
         const dessertsDisplay = dessertSection.map (function (dessertRecipie) {
             return `
-                    <li > 
-                        <img src = ${dessertRecipie.photoUrl} />
-                        <h2>${dessertRecipie.title}</h2>
-                        <h3>${dessertRecipie.cuisine}</h3>
-                        <p>${dessertRecipie.description}</p>                             
-                    </li>`
+            <li > 
+            <a href ="ShowAlldetails.html?recipeId=${dessertRecipie.id}"><img src = ${dessertRecipie.photoUrl} /></a>
+            <h2>${dessertRecipie.title}</h2>
+            <h3>${dessertRecipie.cuisine}</h3>
+            <p>${dessertRecipie.description}</p>
+            <h1>${dessertRecipie.id}</h1>                      
+        </li>`
         })
         dessertPage.innerHTML = dessertsDisplay.join('')
            

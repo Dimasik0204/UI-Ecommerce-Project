@@ -32,7 +32,7 @@ async function getAllMenus () {
     const menuDisplay = result.map (function (recipies) {
         return `
                 <li > 
-                    <img src = ${recipies.photoUrl} />
+                <img src = ${recipies.photoUrl} />
                     <h2>${recipies.title}</h2>
                     <h3>${recipies.course}</h3>
                     <h3>${recipies.cuisine}</h3>
@@ -57,32 +57,11 @@ displayDessertsButton.addEventListener ('click', async function (){
         const dessertsDisplay = dessertSection.map (function (dessertRecipie) {
             return `
                     <li > 
-                        <img src = ${dessertRecipie.photoUrl} />
+                        <a href ="ShowAlldetails.html?recipeId=${dessertRecipie.id}"><img src = ${dessertRecipie.photoUrl} /></a>
                         <h2>${dessertRecipie.title}</h2>
                         <h3>${dessertRecipie.cuisine}</h3>
-                        <p>${dessertRecipie.description}</p>                             
-                    </li>`
-        })
-        desserts.innerHTML = dessertsDisplay.join('')    
-})
-
-displayMainCourseButton.addEventListener ('click', async function (){
-  
-        const url = 'https://api.sampleapis.com/recipes/recipes'
-        let response = await fetch (url) 
-        let result = await response.json()
-        console.log(result)
-
-        const dessertSection = result.filter (function(dessert) {
-            return dessert.course === 'Desserts'
-        })
-        const dessertsDisplay = dessertSection.map (function (dessertRecipie) {
-            return `
-                    <li > 
-                        <img src = ${dessertRecipie.photoUrl} />
-                        <h2>${dessertRecipie.title}</h2>
-                        <h3>${dessertRecipie.cuisine}</h3>
-                        <p>${dessertRecipie.description}</p>                             
+                        <p>${dessertRecipie.description}</p>
+                        <h1>${dessertRecipie.id}</h1>                      
                     </li>`
         })
         desserts.innerHTML = dessertsDisplay.join('')    
@@ -101,7 +80,7 @@ displayMainCourseButton.addEventListener ('click', async function (){
     const MainCourseDisplay = MainCourseSection.map (function (MainCourseRecipie) {
         return `
         <li>
-            <img src = ${MainCourseRecipie.photoUrl} />
+        <a href ="ShowAlldetails.html"><img src = ${MainCourseRecipie.photoUrl} /></a>
             <h2>${MainCourseRecipie.title}</h2>
             <h3>${MainCourseRecipie.cuisine}</h3>
             <p>${MainCourseRecipie.description}</p>
@@ -123,7 +102,7 @@ displayLunchButton.addEventListener ('click', async function (){
     const LunchDisplay = LunchSection.map (function (LunchRecipie) {
         return `
         <li>
-            <img src = ${LunchRecipie.photoUrl} />
+        <a href ="ShowAlldetails.html"><img src = ${LunchRecipie.photoUrl} /></a>
             <h2>${LunchRecipie.title}</h2>
             <h3>${LunchRecipie.cuisine}</h3>
             <p>${LunchRecipie.description}</p>
@@ -145,7 +124,7 @@ displayBreakfastButton.addEventListener ('click', async function (){
     const BreakfastDisplay = BreakfastSection.map (function (BreakfastRecipie) {
         return `
         <li>
-            <img src = ${BreakfastRecipie.photoUrl} />
+        <a href ="ShowAlldetails.html"><img src = ${BreakfastRecipie.photoUrl} /></a>
             <h2>${BreakfastRecipie.title}</h2>
             <h3>${BreakfastRecipie.cuisine}</h3>
             <p>${BreakfastRecipie.description}</p>
@@ -167,7 +146,7 @@ displaySnacksAndSandwichesButton.addEventListener ('click', async function (){
     const SnacksAndSandwichesDisplay = SnacksAndSandwichesSection.map (function (SnacksAndSandwichesRecipie) {
         return `
         <li>
-            <img src = ${SnacksAndSandwichesRecipie.photoUrl} />
+        <a href ="ShowAlldetails.html"><img src = ${SnacksAndSandwichesRecipie.photoUrl} /></a>
             <h2>${SnacksAndSandwichesRecipie.title}</h2>
             <h3>${SnacksAndSandwichesRecipie.cuisine}</h3>
             <p>${SnacksAndSandwichesRecipie.description}</p>
@@ -189,7 +168,7 @@ DisplaySideDishesButton.addEventListener ('click', async function (){
     const SideDishesDisplay = SideDishesSection.map (function (SideDishesRecipie) {
         return `
         <li>
-            <img src = ${SideDishesRecipie.photoUrl} />
+        <a href ="ShowAlldetails.html"><img src = ${SideDishesRecipie.photoUrl} /></a>
             <h2>${SideDishesRecipie.title}</h2>
             <h3>${SideDishesRecipie.cuisine}</h3>
             <p>${SideDishesRecipie.description}</p>
@@ -211,7 +190,7 @@ DisplaySoupButton.addEventListener ('click', async function (){
     const SoupDisplay = SoupSection.map (function (SoupRecipie) {
         return `
         <li>
-            <img src = ${SoupRecipie.photoUrl} />
+        <a href ="ShowAlldetails.html"><img src = ${SoupRecipie.photoUrl} /></a>
             <h2>${SoupRecipie.title}</h2>
             <h3>${SoupRecipie.cuisine}</h3>
             <p>${SoupRecipie.description}</p>

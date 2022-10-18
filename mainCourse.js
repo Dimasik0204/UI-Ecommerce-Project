@@ -1,4 +1,8 @@
 const mainCoursePage = document.getElementById('mainCoursePage')
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const recipeId = urlParams.get('recipeId')
+console.log(recipeId)
 
 async function getMainCoursePage(){
   
@@ -10,13 +14,13 @@ async function getMainCoursePage(){
         const mainCourseSection = result.filter (function(main) {
             return main.course === 'Main Course'
         })
-        const mainCourseDisplay = mainCourseSection.map (function (maintRecipie) {
+        const mainCourseDisplay = mainCourseSection.map (function (mainRecipie) {
             return `
                     <li > 
-                        <img src = ${maintRecipie.photoUrl} />
-                        <h2>${maintRecipie.title}</h2>
-                        <h3>${maintRecipie.cuisine}</h3>
-                        <p>${maintRecipie.description}</p>                             
+                        <img src = ${mainRecipie.photoUrl} />
+                        <h2>${mainRecipie.title}</h2>
+                        <h3>${mainRecipie.cuisine}</h3>
+                        <p>${mainRecipie.description}</p>                             
                     </li>`
         })
         mainCoursePage.innerHTML = mainCourseDisplay.join('')
