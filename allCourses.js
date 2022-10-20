@@ -29,11 +29,9 @@ async function showMainCourse(){
 
     const mainCoursesPage = courses.map (function (mainRecipie) {
         return `
-                <li > 
-                <a href ="ShowAlldetails.html?recipeId=${mainRecipie.id}"><img src = ${mainRecipie.photoUrl} /></a>
+                <li class= "removedot"> 
+                <a href ="ShowAlldetails.html?recipeId=${mainRecipie.id}"><img class= "dotimg" src = ${mainRecipie.photoUrl} /></a>
                     <h2>${mainRecipie.title}</h2>
-                    <h3>${mainRecipie.cuisine}</h3>
-                    <p>${mainRecipie.description}</p>                             
                 </li>`
     })
     mainCourses.innerHTML = mainCoursesPage.join('')
@@ -56,11 +54,15 @@ async function showBreakfastCourses(){
     const breakfastPage = courses.map (function (breakfastRecipie) {
         return `
                 <li > 
-                    <a href ="ShowAlldetails.html?recipeId=${breakfastRecipie.id}"><img src = ${breakfastRecipie.photoUrl} /></a>
-                    <h2>${breakfastRecipie.title}</h2>
-                    <h3>${breakfastRecipie.cuisine}</h3>
-                    <p>${breakfastRecipie.description}</p>                             
-                </li>`
+                    <a href ="ShowAlldetails.html?recipeId=${breakfastRecipie.id}"><img class= "dotimg" src = ${breakfastRecipie.photoUrl} /></a>
+                    <h2>${breakfastRecipie.title}</h2>       
+                    <h3>
+                    <h4>
+                    <h5>
+                    <h6>                   
+                </li>      
+                `
+
     })
     breakfast.innerHTML = breakfastPage.join('')
 }
@@ -81,10 +83,8 @@ async function showSideCourses(){
     const sidePage = courses.map (function (sideRecipie) {
         return `
                 <li > 
-                    <a href ="ShowAlldetails.html?recipeId=${sideRecipie.id}"><img src = ${sideRecipie.photoUrl} /></a>
-                    <h2>${sideRecipie.title}</h2>
-                    <h3>${sideRecipie.cuisine}</h3>
-                    <p>${sideRecipie.description}</p>                             
+                    <a href ="ShowAlldetails.html?recipeId=${sideRecipie.id}"><img class= "dotimg" src = ${sideRecipie.photoUrl} /></a>
+                    <h2>${sideRecipie.title}</h2>                         
                 </li>`
     })
     sideDishes.innerHTML = sidePage.join('')
@@ -106,13 +106,11 @@ async function showDessertCourses(){
     const dessertPage = courses.map (function (dessertRecipie) {
         return `
                 <li > 
-                    <a href ="ShowAlldetails.html?recipeId=${dessertRecipie.id}"><img src = ${dessertRecipie.photoUrl} /></a>
-                    <h2>${dessertRecipie.title}</h2>
-                    <h3>${dessertRecipie.cuisine}</h3>
-                    <p>${dessertRecipie.description}</p>                             
+                    <a href ="ShowAlldetails.html?recipeId=${dessertRecipie.id}"><img class= "dotimg" src = ${dessertRecipie.photoUrl} /></a>
+                    <h2>${dessertRecipie.title}</h2>                           
                 </li>`
     })
-    dessert.innerHTML = dessertPage.join('')
+    desserts.innerHTML = dessertPage.join('')
 }
 showDessertCourses()
 
@@ -131,10 +129,8 @@ async function showLunchCourses(){
     const lunchPage = courses.map (function (lunchtRecipie) {
         return `
                 <li > 
-                    <a href ="ShowAlldetails.html?recipeId=${lunchtRecipie.id}"><img src = ${lunchtRecipie.photoUrl} /></a>
-                    <h2>${lunchtRecipie.title}</h2>
-                    <h3>${lunchtRecipie.cuisine}</h3>
-                    <p>${lunchtRecipie.description}</p>                             
+                    <a href ="ShowAlldetails.html?recipeId=${lunchtRecipie.id}"><img class= "dotimg" src = ${lunchtRecipie.photoUrl} /></a>
+                    <h2>${lunchtRecipie.title}</h2>                           
                 </li>`
     })
     lunch.innerHTML = lunchPage.join('')
@@ -156,10 +152,8 @@ async function showSnackCourses(){
     const snackPage = courses.map (function (snackRecipie) {
         return `
                 <li > 
-                    <a href ="ShowAlldetails.html?recipeId=${snackRecipie.id}"><img src = ${snackRecipie.photoUrl} /></a>
-                    <h2>${snackRecipie.title}</h2>
-                    <h3>${snackRecipie.cuisine}</h3>
-                    <p>${snackRecipie.description}</p>                             
+                    <a href ="ShowAlldetails.html?recipeId=${snackRecipie.id}"><img class= "dotimg" src = ${snackRecipie.photoUrl} /></a>
+                    <h2>${snackRecipie.title}</h2>                         
                 </li>`
     })
     snack.innerHTML = snackPage.join('')
@@ -181,10 +175,8 @@ async function showSoupCourses(){
     const soupPage = courses.map (function (soupRecipie) {
         return `
                 <li > 
-                    <a href ="ShowAlldetails.html?recipeId=${soupRecipie.id}"><img src = ${soupRecipie.photoUrl} /></a>
-                    <h2>${soupRecipie.title}</h2>
-                    <h3>${soupRecipie.cuisine}</h3>
-                    <p>${soupRecipie.description}</p>                             
+                    <a href ="ShowAlldetails.html?recipeId=${soupRecipie.id}"><img class= "dotimg" src = ${soupRecipie.photoUrl} /></a>
+                    <h2>${soupRecipie.title}</h2>                         
                 </li>`
     })
     soup.innerHTML = soupPage.join('')

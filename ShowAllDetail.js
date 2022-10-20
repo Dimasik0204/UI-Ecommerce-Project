@@ -1,7 +1,7 @@
-document.getElementById('detailDiv')
+const detailDiv = document.getElementById('detailDiv')
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
+const qString = window.location.search;
+const urlParams = new URLSearchParams(qString);
 const recipeId = urlParams.get('recipeId')
 console.log(recipeId)
 async function ShowAllDetailPage(){
