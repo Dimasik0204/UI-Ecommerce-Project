@@ -7,13 +7,16 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
       <link rel="stylesheet" href="style.css"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   </head>
 
   <body>
+    <div>
     <h1 class="animate__animated animate__fadeInDown">Bon APPetit</h1>
 
     <div clas = "bootstrapDiv">
       <ul class="nav justify-content-center">
+<<<<<<< HEAD
         <li class="nav-item">
           <a class="nav-link" href="index.html">Home</a>
         </li>
@@ -64,57 +67,79 @@
     <hr>
 
 
+=======
+    <li class="nav-item">
+      <a class="nav-link" href="cover.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Recipes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">Contact Us</a>
+    </li>
+  </ul>
+>>>>>>> a6ce77ecdbe336053197bf9b9198f7f7d419e53d
 
-        <button id = "displayDessertsButton">Desserts</button>
-        <div id = 'desserts'></div>
-  
-      <button id="displayMainCourseButton">Main Course</button>
-      <div id="MainCourse"></div>
+</div>
 
-      <button id="displayBreakfastButton">Breakfast</button>
-      <div id="Breakfast"></div>
-
-      <button id="displayLunchButton">Lunch</button>
-      <div id="Lunch"></div>
-
-      <button id="displaySnacksAndSandwichesButton">Snacks and Sandwiches</button>
-      <div id="SnacksAndSandwiches"></div>
-
-      <button id="DisplaySideDishesButton">Side Dishes</button>
-      <div id="SideDishes"></div>
-
-      <button id="DisplaySoupButton">Soup</button>
-      <div id="Soup"></div>
-
-
-      <button id = "search">Search Button</button> <br>
-
-      <h1 class="newsLetterBar">Newsletter</h1>
+<!-- <div class = 'courses'>
+  <a href="allCourses.html?course=Main Course"><b>Main Course</b></a>
+  <a href="allCourses.html?course=Lunch"><b>Lunch</b></a>
+  <a href="allCourses.html?course=Breakfast"><b>Breakfast</b></a>
+  <a href="allCourses.html?course=Side Dishes"><b>Side Dishes</b></a>
+  <a href="allCourses.html?course=Desserts"><b>Desserts</b></a>
+  <a href="allCourses.html?course=Snacks and Sandwiches"><b>Snacks and Sandwiches</b></a>
+  <a href="allCourses.html?course=Soup"><b>Soup</b></a>
+</div> -->
 
 
-      <div class="form-floating mb-3">
-        <label for="floatingInput">Email address</label>
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+<img class="recipeimg" src="images/brooke-lark-wMzx2nBdeng-unsplash.jpg" alt="">
+
+<h6 class="recipestitle">Browse all the recipes here, select a category or search for an ingredient.</h6>
+
+
+  <div class='courseimg'>
+    <a href="allCourses.html?course=Main Course"> <img class= 'breakfastimg' src="images/Screenshot 2022-10-20 170234.png" alt="">
+      <figcaption>Main Course</figcaption></a>
+    <a href="allCourses.html?course=Lunch"> <img class= 'breakfastimg' src="images/HummusBowl-65a0050.jpg" alt="">
+      <figcaption>Lunch</figcaption></a>
+    <a href="allCourses.html?course=Breakfast"> <img class= 'breakfastimg' src="images/breakfast-board.jpg" alt="">
+      <figcaption>Breakfast</figcaption></a>
+    <a href="allCourses.html?course=Side Dishes"> <img class= 'breakfastimg' src="images/5dc5509ff63d218aa60ab39e507be62b.jpg" alt="">
+      <figcaption>Side Dishes</figcaption>
+    </div>
+
+    <div class='courseimg'>
+    <a href="allCourses.html?course=Desserts"> <img class= 'breakfastimg' src="images/dessert-main-image-molten-cake-0fbd4f2.jpg" alt="">
+      <figcaption>Desserts</figcaption>
+    <a href="allCourses.html?course=Soup"> <img class= 'breakfastimg' src="images/26460-quick-and-easy-chicken-noodle-soup-allrecipes-1x1-1-b88125437574471db3e114c40bc6928e.jpg" alt="">
+        <figcaption>Soup</figcaption></a>
+    <a href="allCourses.html?course=Snack and Sandwiches"> <img class= 'breakfastimg' src="images/mini-sandwiches-for-party-480x480.jpg" alt="">
+      <figcaption>Snack And Sandwiches</figcaption></a>
+  </div>
+
+
+      <div class="container">
+        <form action="">
+          <h2>JOIN OUR DELICIOUS NEWSLETTER</h2>
+          <p>New recipes delivered to your inbox once a month.</p>
+          <div class="email-box">
+            <i class="fas fa-envelope"></i>
+            <input class="tbox" type="email" name="" value="" placeholder="Enter your email">
+            <button class="btn" type="button" name="button">Subscribe</button>
+          </div>
+        </form>
       </div>
-      <div class="form-floating">
-        <label for="floatingPassword">Password</label>
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      </div>
-      <hr>
 
-
-
-
-      <div>
-        <li id="allCourses"></li>
-      </div>
 
       
+
 
 
       
      
   
       <script src="app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
   </html>

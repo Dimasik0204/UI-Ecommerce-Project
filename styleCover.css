@@ -1,0 +1,59 @@
+.animate__animated {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.menuCover {
+    width: 350px;
+    height: 350px;
+}
+
+.nav-link {
+    color: brown;
+    margin-bottom: 30px;
+}
+
+.main{
+    width: 220px;
+    border:03px solid #009933;
+    padding: 08px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    margin-left: 33%;
+    
+}
+
+input {
+    background: transparent;
+    border:0px;
+    outline: 0px;
+    width: 180px;
+  
+}
+.icon-search {
+    color: #009933;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topCover {
+   align-items: center;
+    justify-content: center;
+    display: flex;
+    justify-content: flex-end;
+   
+    width: 100%;
+    
+}
+.searchTop{
+    display:flex;
+    margin-left: 500px;
+}
+.bootstrapDiv {
+
+}
