@@ -1,4 +1,8 @@
 const lunchPage = document.getElementById('lunchPage')
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const recipeId = urlParams.get('recipeId')
+console.log(recipeId)
 
 async function getLunchPage(){
   
@@ -12,12 +16,13 @@ async function getLunchPage(){
         })
         const lunchDisplay = lucnhSection.map (function (lunchRecipie) {
             return `
-                    <li > 
-                        <img src = ${lunchRecipie.photoUrl} />
-                        <h2>${lunchRecipie.title}</h2>
-                        <h3>${lunchRecipie.cuisine}</h3>
-                        <p>${lunchRecipie.description}</p>                             
-                    </li>`
+            <li>
+            <a href ="ShowAlldetails.html?recipeId=${lunchRecipie.id}"><img src = ${lunchRecipie.photoUrl} /></a>
+                <h2>${lunchRecipie.title}</h2>
+                <h3>${lunchRecipie.cuisine}</h3>
+                <p>${lunchRecipie.description}</p>
+                <h1>${lunchRecipie.id}</h1>
+            </li>`
         })
         lunchPage.innerHTML = lunchDisplay.join('')
            

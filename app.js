@@ -80,10 +80,11 @@ displayMainCourseButton.addEventListener ('click', async function (){
     const MainCourseDisplay = MainCourseSection.map (function (MainCourseRecipie) {
         return `
         <li>
-        <a href ="ShowAlldetails.html"><img src = ${MainCourseRecipie.photoUrl} /></a>
+        <a href ="ShowAlldetails.html?recipeId=${MainCourseRecipie.id}"><img src = ${MainCourseRecipie.photoUrl} /></a>
             <h2>${MainCourseRecipie.title}</h2>
             <h3>${MainCourseRecipie.cuisine}</h3>
             <p>${MainCourseRecipie.description}</p>
+            <h1>${MainCourseRecipie.id}</h1>
         </li>`
     })
     MainCourse.innerHTML = MainCourseDisplay.join('')
@@ -99,16 +100,17 @@ displayLunchButton.addEventListener ('click', async function (){
     const LunchSection = result.filter (function(Lunch) {
         return Lunch.course === 'Lunch'
     })
-    const LunchDisplay = LunchSection.map (function (LunchRecipie) {
+    const LunchDisplay = LunchSection.map (function (lunchRecipie) {
         return `
         <li>
-        <a href ="ShowAlldetails.html"><img src = ${LunchRecipie.photoUrl} /></a>
-            <h2>${LunchRecipie.title}</h2>
-            <h3>${LunchRecipie.cuisine}</h3>
-            <p>${LunchRecipie.description}</p>
+        <a href ="ShowAlldetails.html?recipeId=${lunchRecipie.id}"><img src = ${lunchRecipie.photoUrl} /></a>
+            <h2>${lunchRecipie.title}</h2>
+            <h3>${lunchRecipie.cuisine}</h3>
+            <p>${lunchRecipie.description}</p>
+            <h1>${lunchRecipie.id}</h1>
         </li>`
     })
-    Lunch.innerHTML = LunchDisplay.join('')
+    lunch.innerHTML = LunchDisplay.join('')
 })
 
 displayBreakfastButton.addEventListener ('click', async function (){
@@ -121,13 +123,14 @@ displayBreakfastButton.addEventListener ('click', async function (){
     const BreakfastSection = result.filter (function(Breakfast) {
         return Breakfast.course === 'Breakfast'
     })
-    const BreakfastDisplay = BreakfastSection.map (function (BreakfastRecipie) {
+    const BreakfastDisplay = BreakfastSection.map (function (breakfastRecipie) {
         return `
         <li>
-        <a href ="ShowAlldetails.html"><img src = ${BreakfastRecipie.photoUrl} /></a>
-            <h2>${BreakfastRecipie.title}</h2>
-            <h3>${BreakfastRecipie.cuisine}</h3>
-            <p>${BreakfastRecipie.description}</p>
+        <a href ="ShowAlldetails.html?recipeId=${breakfastRecipie.id}"><img src = ${breakfastRecipie.photoUrl} /></a>
+            <h2>${breakfastRecipie.title}</h2>
+            <h3>${breakfastRecipie.cuisine}</h3>
+            <p>${breakfastRecipie.description}</p>
+            <h1>${breakfastRecipie.id}</h1>
         </li>`
     })
     Breakfast.innerHTML = BreakfastDisplay.join('')
@@ -146,10 +149,11 @@ displaySnacksAndSandwichesButton.addEventListener ('click', async function (){
     const SnacksAndSandwichesDisplay = SnacksAndSandwichesSection.map (function (SnacksAndSandwichesRecipie) {
         return `
         <li>
-        <a href ="ShowAlldetails.html"><img src = ${SnacksAndSandwichesRecipie.photoUrl} /></a>
+        <a href ="ShowAlldetails.html?recipeId=${SnacksAndSandwichesRecipie.id}"><img src = ${SnacksAndSandwichesRecipie.photoUrl} /></a>
             <h2>${SnacksAndSandwichesRecipie.title}</h2>
             <h3>${SnacksAndSandwichesRecipie.cuisine}</h3>
             <p>${SnacksAndSandwichesRecipie.description}</p>
+            <h1>${SnacksAndSandwichesRecipie.id}</h1>
         </li>`
     })
     SnacksAndSandwiches.innerHTML = SnacksAndSandwichesDisplay.join('')
@@ -168,10 +172,11 @@ DisplaySideDishesButton.addEventListener ('click', async function (){
     const SideDishesDisplay = SideDishesSection.map (function (SideDishesRecipie) {
         return `
         <li>
-        <a href ="ShowAlldetails.html"><img src = ${SideDishesRecipie.photoUrl} /></a>
+        <a href ="ShowAlldetails.html?recipeId=${SideDishesRecipie.id}"><img src = ${SideDishesRecipie.photoUrl} /></a>
             <h2>${SideDishesRecipie.title}</h2>
             <h3>${SideDishesRecipie.cuisine}</h3>
             <p>${SideDishesRecipie.description}</p>
+            <h1>${SideDishesRecipie.id}</h1>
         </li>`
     })
     SideDishes.innerHTML = SideDishesDisplay.join('')
@@ -190,10 +195,11 @@ DisplaySoupButton.addEventListener ('click', async function (){
     const SoupDisplay = SoupSection.map (function (SoupRecipie) {
         return `
         <li>
-        <a href ="ShowAlldetails.html"><img src = ${SoupRecipie.photoUrl} /></a>
+        <a href ="ShowAlldetails.html?recipeId=${SoupRecipie.id}"><img src = ${SoupRecipie.photoUrl} /></a>
             <h2>${SoupRecipie.title}</h2>
             <h3>${SoupRecipie.cuisine}</h3>
             <p>${SoupRecipie.description}</p>
+            <h1>${SoupRecipie.id}</h1>
         </li>`
     })
     Soup.innerHTML = SoupDisplay.join('')

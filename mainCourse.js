@@ -14,14 +14,15 @@ async function getMainCoursePage(){
         const mainCourseSection = result.filter (function(main) {
             return main.course === 'Main Course'
         })
-        const mainCourseDisplay = mainCourseSection.map (function (mainRecipie) {
+        const mainCourseDisplay = mainCourseSection.map (function (mainCourseRecipie) {
             return `
-                    <li > 
-                        <img src = ${mainRecipie.photoUrl} />
-                        <h2>${mainRecipie.title}</h2>
-                        <h3>${mainRecipie.cuisine}</h3>
-                        <p>${mainRecipie.description}</p>                             
-                    </li>`
+            <li>
+            <a href ="ShowAlldetails.html?recipeId=${mainCourseRecipie.id}"><img src = ${mainCourseRecipie.photoUrl} /></a>
+                <h2>${mainCourseRecipie.title}</h2>
+                <h3>${mainCourseRecipie.cuisine}</h3>
+                <p>${mainCourseRecipie.description}</p>
+                <h1>${mainCourseRecipie.id}</h1>
+            </li>`
         })
         mainCoursePage.innerHTML = mainCourseDisplay.join('')
            

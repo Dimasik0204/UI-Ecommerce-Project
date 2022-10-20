@@ -13,3 +13,15 @@
     color: brown;
     margin-bottom: 30px;
 }
+
+.newsLetterBar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.submitBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

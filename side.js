@@ -10,14 +10,14 @@ async function getSidetPage(){
         const sideSection = result.filter (function(sides) {
             return sides.course === 'Side Dishes'
         })
-        const sideDisplay = sideSection.map (function (sideRecipie) {
+        const sideDisplay = sideSection.map (function (SideDishesRecipie) {
             return `
-                    <li > 
-                        <img src = ${sideRecipie.photoUrl} />
-                        <h2>${sideRecipie.title}</h2>
-                        <h3>${sideRecipie.cuisine}</h3>
-                        <p>${sideRecipie.description}</p>                             
-                    </li>`
+            <a href ="ShowAlldetails.html?recipeId=${SideDishesRecipie.id}"><img src = ${SideDishesRecipie.photoUrl} /></a>
+            <h2>${SideDishesRecipie.title}</h2>
+            <h3>${SideDishesRecipie.cuisine}</h3>
+            <p>${SideDishesRecipie.description}</p>
+            <h1>${SideDishesRecipie.id}</h1>
+        </li>`
         })
         sidePage.innerHTML = sideDisplay.join('')
            
