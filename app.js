@@ -15,6 +15,9 @@ const SideDishes = document.getElementById('SideDishes')
 const DisplaySideDishesButton = document.getElementById('DisplaySideDishesButton')
 const Soup = document.getElementById('Soup')
 const DisplaySoupButton = document.getElementById('DisplaySoupButton')
+const allCourses = document.getElementById('allCourses')
+const searchButton = document.getElementById('searchButton')
+const displaySearch = document.getElementById('displaySearch')
 
 search.addEventListener('click', async function searchOrders (){
     let url = `https://api.sampleapis.com/recipes/recipes`
@@ -206,11 +209,95 @@ DisplaySoupButton.addEventListener ('click', async function (){
 })
 
 
+async function getAllCourses(){
+  
+    const url = 'https://api.sampleapis.com/recipes/recipes'
+    let response = await fetch (url) 
+    let result = await response.json()
+    console.log(result)
+
+
+    const courses = result.map (function (course) {
+        return `
+        <li > 
+        <a href ="ShowAlldetails.html?recipeId=${dessertRecipie.id}"><img src = ${dessertRecipie.photoUrl} /></a>
+        <h2>${dessertRecipie.title}</h2>
+        <h3>${dessertRecipie.cuisine}</h3>
+        <p>${dessertRecipie.description}</p>
+        <h1>${dessertRecipie.id}</h1>                      
+    </li>`
+    })
+    dessertPage.innerHTML = dessertsDisplay.join('')
+       
+} 
+getAllCourses()
+
+searchButton.addEventListener('click', async function (){
+    const inputBox = document.getElementById("inputBox").value
+
+
+    const url = 'https://api.sampleapis.com/recipes/recipes'
+    let response = await fetch (url) 
+    let result = await response.json()
+    console.log(result)
+
+    const filteredRecipes = result.filter ((function(recipe){
+        return recipe.title.toLowerCase().includes(inputBox.toLowerCase()) ||
+               recipe.course.toLowerCase().includes(inputBox.toLowerCase()) ||
+               recipe.cuisine.toLowerCase().includes(inputBox.toLowerCase()) ||
+               recipe.mainIngredient.toLowerCase().includes(inputBox.toLowerCase()) 
+    }))
+    console.log (filteredRecipes)
+    const showResult = filteredRecipes.map (function (search) {
+        return `
+                <li>
+                    <img src = ${search.photoUrl} />
+                    <h2>${search.title}</h2>
+                    <h3>${search.cuisine}</h3>
+                    <h3>${search.coarse}</h3>
+                    <p>${search.description}</p>
+                </li>`
+    })
+    displaySearch.innerHTML = showResult.join('')
+
+})
+ 
+
+/*
+if (result.filter(i => (i === inputBox)).length) {
+        console.log('Found');
+      } else {
+        console.log('Not Found');
+      }
+ */   
 
 
 /*
+    const searchBy  = result.filter (function(course) {
+        return course.course === inputBox || course.cuisine === inputBox || course.title == inputBox
+        
+    })
+    const showResult = searchBy.map (function (search) {
+        return `
+                <li>
+                    <img src = ${search.photoUrl} />
+                    <h2>${search.title}</h2>
+                    <h3>${search.cuisine}</h3>
+                    <h3>${search.coarse}</h3>
+                    <p>${search.description}</p>
+                </li>`
+    })
 
-getAllMenues(function(menues){
-console.log(menues)
-})
-*/
+    var detail = result.filter(item => !item.includes(inputBox))
+    console.log(detail)
+    
+    
+    console.log(searchBy)
+  */  
+
+
+
+
+
+
+

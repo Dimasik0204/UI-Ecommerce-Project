@@ -29,22 +29,33 @@
           <ul id="menu" ></ul>
 
           <div class = 'courses'>
-            <a href="mainCourse.html"><b>Main Course</b></a>
-            <a href="lunch.html"><b>Lunch</b></a>
-            <a href="breakfast.html"><b>Breakfast</b></a>
-            <a href="side.html"><b>Side Dishes</b></a>
-            <a href="desserts.html"><b>Desserts</b></a>
-            <a href="snacks.html"><b>Snacks and Sandwiches</b></a>
-            <a href="soup.html"><b>Soup</b></a>
+            <a href="allCourses.html?course=Main Course"><b>Main Course</b></a>
+            <a href="allCourses.html?course=Lunch"><b>Lunch</b></a>
+            <a href="allCourses.html?course=Breakfast"><b>Breakfast</b></a>
+            <a href="allCourses.html?course=Side Dishes"><b>Side Dishes</b></a>
+            <a href="allCourses.html?course=Desserts"><b>Desserts</b></a>
+            <a href="allCourses.html?course=Snack and Sandwiches"><b>Snacks and Sandwiches</b></a>
+            <a href="allCourses.html?course=Soup"><b>Soup</b></a>
           </div>
           
 
   
-
+         <!-- <a href = "allCourses.html?search =button"</a></a> -->
       </div>
 
           
     </div>
+    <br>
+    <hr>
+    <input id ="inputBox" type ="text" placeholder="Search"/>
+    <button id = "searchButton">Search</button>
+    <div id="displaySearch"></div>
+
+
+    <br>
+    <hr>
+
+
 
         <button id = "displayDessertsButton">Desserts</button>
         <div id = 'desserts'></div>
@@ -81,6 +92,18 @@
         <label for="floatingPassword">Password</label>
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
       </div>
+      <hr>
+
+
+
+
+      <div>
+        <li id="allCourses"></li>
+      </div>
+
+      
+
+
       
      
   
