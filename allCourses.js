@@ -10,6 +10,7 @@ const soup = document.getElementById('soup')
 
 
 
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const course = urlParams.get('course')
