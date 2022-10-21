@@ -1,7 +1,7 @@
-
 const search = document.getElementById ('search')
 const menu = document.getElementById('menu')
 const allCourses = document.getElementById('allCourses')
+const searchButton = document.getElementById('searchButton')
 const displaySearch = document.getElementById('displaySearch')
 
 search.addEventListener('click', async function searchOrders (){
@@ -86,42 +86,3 @@ searchButton.addEventListener('click', async function (){
 
 })
  
-
-/*
-if (result.filter(i => (i === inputBox)).length) {
-        console.log('Found');
-      } else {
-        console.log('Not Found');
-      }
- */   
-
-
-/*
-    const searchBy  = result.filter (function(course) {
-        return course.course === inputBox || course.cuisine === inputBox || course.title == inputBox
-        
-    })
-    const showResult = searchBy.map (function (search) {
-        return `
-                <li>
-                    <img src = ${search.photoUrl} />
-                    <h2>${search.title}</h2>
-                    <h3>${search.cuisine}</h3>
-                    <h3>${search.coarse}</h3>
-                    <p>${search.description}</p>
-                </li>`
-    })
-
-    var detail = result.filter(item => !item.includes(inputBox))
-    console.log(detail)
-    
-    
-    console.log(searchBy)
-  */  
-
-
-
-
-
-
-
