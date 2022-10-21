@@ -2,9 +2,6 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    font-weight: bold;
-    font-family: Brush Script MT;
-    font-size: -webkit-xxx-large;
 }
 
 .menuCover {
@@ -17,16 +14,11 @@
     margin-bottom: 30px;
 }
 
-<<<<<<< HEAD
 .main{
     width: 220px;
     border:03px solid #009933;
     padding: 08px;
     border-radius: 30px;
-=======
-
-.submitBtn {
->>>>>>> a6ce77ecdbe336053197bf9b9198f7f7d419e53d
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +27,6 @@
     
 }
 
-<<<<<<< HEAD
 input {
     background: transparent;
     border:0px;
@@ -63,123 +54,14 @@ input {
     display:flex;
     margin-left: 500px;
 }
-=======
-.carousel-control-prev {
-    width: 5%;
+.bootstrapDiv {
 }
 
-.carousel-control-next {
-    width: 5%;
+.img-fluid{
+    object-fit: cover;
 }
 
-a{
-    margin-right: 15px;
- }
-
- .courses {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1%;
- }
-
- .breakfastimg {
-    width: 300px;
-    height: 300px;
- }
-
-.courseimg {
-    display: flex;
-    justify-content: center;
-    margin-top: 2%;
+.displaySearch{
+    background-image: url()
+    
 }
-
-figcaption {
-    display: flex;
-    justify-content: center;
-}
-
-
-
-
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "montserrat",sans-serif;
-  }
-  .container{
-    background: url(images/photo-1516211697506-8360dbcfe9a4.avif) no-repeat center;
-    background-size: cover;
-    padding: 100px 40px;
-    text-align: center;
-    color: brown;
-    margin-top: 2%;
-    margin-bottom: 2%;
-  }
-  .container p {
-    max-width: 600px;
-    margin: 40px auto;
-    font-size: 15px;
-    font-weight: 300;
-  }
-  .email-box{
-    height: 40px;
-    justify-content: center;
-    display: inline-flex; /*its better to use inline-flex*/
-  }
-  .email-box i{
-    background: #2f3542;
-    width: 40px;
-    line-height: 40px;
-  }
-  .tbox,.btn{
-    border: none;
-    outline: none;
-  }
-  .tbox{
-    width: 0px;
-    transition: 0.6s;
-  }
-  .email-box:hover > .tbox,.tbox:focus{
-    width: 260px;
-    padding: 0 10px;
-  }
-  .btn{
-    background: #2f3542;
-    color: brown;
-    padding: 0 10px;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-  
-
-.recipestitle {
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.recipeimg {
-  height: 75%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-  margin-bottom: 2%;
-}
-
-body {
-  background-color: antiquewhite;
-}
-
-.removedot {
-  list-style-type: none;
-  display: flex;
-  margin: 30px;
-}
-
-.dotimg {
-  width: 500px;
-  height: 500px;
-}
->>>>>>> a6ce77ecdbe336053197bf9b9198f7f7d419e53d
