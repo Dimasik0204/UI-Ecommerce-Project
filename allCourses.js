@@ -10,7 +10,6 @@ const soup = document.getElementById('soup')
 
 
 
-
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const course = urlParams.get('course')
@@ -54,7 +53,7 @@ async function showBreakfastCourses(){
 
     const breakfastPage = courses.map (function (breakfastRecipie) {
         return `
-                <li > 
+                <li class= "removedot"> 
                     <a href ="ShowAlldetails.html?recipeId=${breakfastRecipie.id}"><img class= "dotimg" src = ${breakfastRecipie.photoUrl} /></a>
                     <h2>${breakfastRecipie.title}</h2>       
                     <h3>
@@ -83,7 +82,7 @@ async function showSideCourses(){
 
     const sidePage = courses.map (function (sideRecipie) {
         return `
-                <li > 
+                <li class= "removedot"> 
                     <a href ="ShowAlldetails.html?recipeId=${sideRecipie.id}"><img class= "dotimg" src = ${sideRecipie.photoUrl} /></a>
                     <h2>${sideRecipie.title}</h2>                         
                 </li>`
@@ -106,7 +105,7 @@ async function showDessertCourses(){
 
     const dessertPage = courses.map (function (dessertRecipie) {
         return `
-                <li > 
+                <li class= "removedot"> 
                     <a href ="ShowAlldetails.html?recipeId=${dessertRecipie.id}"><img class= "dotimg" src = ${dessertRecipie.photoUrl} /></a>
                     <h2>${dessertRecipie.title}</h2>                           
                 </li>`
@@ -129,7 +128,7 @@ async function showLunchCourses(){
 
     const lunchPage = courses.map (function (lunchtRecipie) {
         return `
-                <li > 
+                <li class= "removedot"> 
                     <a href ="ShowAlldetails.html?recipeId=${lunchtRecipie.id}"><img class= "dotimg" src = ${lunchtRecipie.photoUrl} /></a>
                     <h2>${lunchtRecipie.title}</h2>                           
                 </li>`
@@ -152,7 +151,7 @@ async function showSnackCourses(){
 
     const snackPage = courses.map (function (snackRecipie) {
         return `
-                <li > 
+                <li class= "removedot"> 
                     <a href ="ShowAlldetails.html?recipeId=${snackRecipie.id}"><img class= "dotimg" src = ${snackRecipie.photoUrl} /></a>
                     <h2>${snackRecipie.title}</h2>                         
                 </li>`
@@ -175,7 +174,7 @@ async function showSoupCourses(){
 
     const soupPage = courses.map (function (soupRecipie) {
         return `
-                <li > 
+                <li class= "removedot"> 
                     <a href ="ShowAlldetails.html?recipeId=${soupRecipie.id}"><img class= "dotimg" src = ${soupRecipie.photoUrl} /></a>
                     <h2>${soupRecipie.title}</h2>                         
                 </li>`
